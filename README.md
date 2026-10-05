@@ -30,9 +30,9 @@
 
 ---
 
-#### Création du discovery Service
+#### Création du gateway Service
 
-- Création du service discovery : un module springBoot avec les dépendances suivantes : Eureka pour discovery, actuator pour le monitoring des micros services, ReactiveGateway
+- Création du service gateway : un module springBoot avec les dépendances suivantes : Eureka pour discovery, actuator pour le monitoring des micros services, ReactiveGateway
 - Création du ficier application.yml avec un routage statique des routes du customer service et ebank service
   ![img_6.png](img_6.png)
 
