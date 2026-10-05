@@ -2,6 +2,7 @@ package net.hmi.ebankservice.services;
 
 import net.hmi.ebankservice.entities.BankAccount;
 import net.hmi.ebankservice.feign.CustomerRestClient;
+import net.hmi.ebankservice.model.Customer;
 import net.hmi.ebankservice.repository.BankAccountRepository;
 import org.springframework.stereotype.Service;
 
@@ -30,8 +31,14 @@ public class EbankService {
     }
 
     public BankAccount save(BankAccount bankAccount){
-        bankAccount.setId(UUID.randomUUID().toString());
-        bankAccount.setCreatedAt(new Date());
-        return bankAccountRepository.save(bankAccount);
+        try{
+            Customer customer = customerRestClient.getCustomerById(bankAccount.getCustomerId());
+            bankAccount.setId(UUID.randomUUID().toString());
+            bankAccount.setCreatedAt(new Date());
+            return bankAccountRepository.save(bankAccount);
+        }catch (Exception e){
+            throw new RuntimeException(e.getMessage());
+        }
+
     }
 }

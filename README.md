@@ -59,5 +59,16 @@
 - Dans ebank-serviceApplication on ajoute l'annotation @EnableFeignClients
 - Tester l'accès au ebank service d'après le discovery et accéder aux customers
   ![img_8.png](img_8.png)
+  ![img_9.png](img_9.png)
+
+
+---
+
+#### Utilisation du Resillience4j pour résoudre les pannes
+
+- Ajouter la dépendance Resilience4j
+- Dans package Reign , dans les interface Rest on ajoute l'annotation @CircuitBreaker avec method Fallback qui affiche un client par défaut
+  ![img_10.png](img_10.png)
+
 
 
