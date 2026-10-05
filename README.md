@@ -11,4 +11,5 @@
 
 - Création du service Customer : un module springBoot avec les dépendances suivantes : SpringWeb, SpringDataJpa, H2 Database, Lombok, Eureka pour discovery, ConfigClient pour configuration, actuator pour le monitoring des micros services, MCP pour le chatbot
 - Création des packages : Entites, Repository, Service, Controller
-
+- Initialisation d'un client via CommandLineRunner annoté @Bean et exposer l'application via le port 8056 avec l'ajout de la documentation swagger.
+![img.png](img.png)
