@@ -37,3 +37,14 @@
   ![img_6.png](img_6.png)
 
 
+---
+
+#### Création du discovery Service
+
+- Création du service gateway : un module springBoot avec les dépendances suivantes : Eureka pour discovery, actuator pour le monitoring des micros services
+- Ajouter l'annotation @EnableEurekaServer
+- Dans le fichier application.properties, configurer le regist-with-eureka et fetch-registory false pour dire à discovery server de ne pas s'enregistrer sur lui meme
+- Tester la connexion
+  ![img_7.png](img_7.png)
+
+
