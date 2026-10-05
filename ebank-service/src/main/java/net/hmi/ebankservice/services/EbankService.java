@@ -1,6 +1,7 @@
 package net.hmi.ebankservice.services;
 
 import net.hmi.ebankservice.entities.BankAccount;
+import net.hmi.ebankservice.feign.CustomerRestClient;
 import net.hmi.ebankservice.repository.BankAccountRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +12,11 @@ import java.util.UUID;
 @Service
 public class EbankService {
     private BankAccountRepository bankAccountRepository;
+    private CustomerRestClient customerRestClient;
 
-    public EbankService(BankAccountRepository bankAccountRepository) {
+    public EbankService(BankAccountRepository bankAccountRepository, CustomerRestClient customerRestClient) {
         this.bankAccountRepository = bankAccountRepository;
+        this.customerRestClient = customerRestClient;
     }
 
     public List<BankAccount> getAllBankAccounts(){
@@ -21,7 +24,9 @@ public class EbankService {
     }
 
     public BankAccount getBankAccountById(String id){
-        return bankAccountRepository.findById(id).orElseThrow(()-> new RuntimeException("Account not found"));
+        BankAccount bankAccount =  bankAccountRepository.findById(id).orElseThrow(()-> new RuntimeException("Account not found"));
+        bankAccount.setCustomer(customerRestClient.getCustomerById(bankAccount.getCustomerId()));
+        return bankAccount;
     }
 
     public BankAccount save(BankAccount bankAccount){

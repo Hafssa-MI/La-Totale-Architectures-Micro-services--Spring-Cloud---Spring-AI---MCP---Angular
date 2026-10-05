@@ -48,3 +48,16 @@
   ![img_7.png](img_7.png)
 
 
+---
+
+#### Utilisation du OpenFeign pour communication entre services
+
+- Configurer le routage dynamique : en créeant une méthode annotée @Bean de type DiscoveryClientRouteDefinitionLocator dans ebank-serviceApplication
+- Ajouter la dépendance du OpenFeign
+- Ajouter le package Feign dans le micro service contenant l'interface CustomerRestClient avec l'annotation @FeignClient contenat le nom du customer-service pour le trouver à l'aide du discovery service
+- Dans la couche service on injecte le CustomerRestClient et on l'utilise pour accéder aux informations du customer
+- Dans ebank-serviceApplication on ajoute l'annotation @EnableFeignClients
+- Tester l'accès au ebank service d'après le discovery et accéder aux customers
+  ![img_8.png](img_8.png)
+
+
