@@ -87,7 +87,24 @@
 - Ajouter le ToolCallbackProvider et tester
   ![img_14.png](img_14.png)
   ![img_15.png](img_15.png)
-  
+  ![img_16.png](img_16.png)
+  ![img_17.png](img_17.png)
+
+- Ajouter un System message pour limiter le contexte de réponse pour l'agent
+  ![img_18.png](img_18.png)
+  ![img_19.png](img_19.png)
+  ![img_20.png](img_20.png)
+  ![img_21.png](img_21.png)
+  ![img_22.png](img_22.png)
+  ![img_23.png](img_23.png)
 
 
+---
+
+#### Configurer la connexion avec Discord
+
+- Ajouter la dépendance du discord dans le microservice ai agent
+- Créer un package discord dont on ajoutera une classe DiscordBot annoté @DiscordController, Injecter le EbankAIAgent et ajouter une méthode de connexion avec @DiscordMapping
+- Tester
+  ![img_24.png](img_24.png)
 
