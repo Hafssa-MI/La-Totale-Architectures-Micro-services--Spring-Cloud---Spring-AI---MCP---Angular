@@ -80,6 +80,13 @@
 - Créer un package Controller avec une classe @RestController contenant un ChatClient
 - Tester avec un query=Bonjour
   ![img_11.png](img_11.png)
+  ![img_12.png](img_12.png)
+  ![img_13.png](img_13.png) <br>
+- Utiliser le MCP pour la connexion : ajouter la dependance Mcp Server dans les microservices en exposants les méthodes dans le service avec @MCPTool en décrivant les tools pour le LLM et configurer le mcp avec la méthode streamable aui permet la connexion bidirectionelle
+- Ajouter la dépendence MCP client dans le micro service du chatbot et configurer en spécifiant les liens pour que le service se connecte aux serveurs mcp
+- Ajouter le ToolCallbackProvider et tester
+  ![img_14.png](img_14.png)
+  ![img_15.png](img_15.png)
   
 
 
