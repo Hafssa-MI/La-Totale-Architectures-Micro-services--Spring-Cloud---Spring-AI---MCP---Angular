@@ -108,3 +108,14 @@
 - Tester
   ![img_24.png](img_24.png)
 
+
+---
+
+#### Configurer la connexion avec Telegram
+
+- Ajouter la dépendance du telegram dans le microservice ai agent
+- Créer un package telegram dont on ajoutera une classe DiscordBot annoté @Component, Injecter le EbankAIAgent et hériter de TelegramLongPoolingBot et utiliser le TelegramBotsApi
+- disable eureka de créer le Bean de Jersey
+- Tester
+  ![img_25.png](img_25.png)
+
