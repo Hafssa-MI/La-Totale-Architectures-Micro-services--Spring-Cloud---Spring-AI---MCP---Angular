@@ -71,4 +71,16 @@
   ![img_10.png](img_10.png)
 
 
+---
+
+#### Configurer le service chatbot
+
+- Créer un service chatbot avec les dépendences : SpringWeb, OpenAI, EurekaDiscoveryClient, ConfigClient,SpringBoot  actuator, Swagger
+- Configurer l api key et le port 8058
+- Créer un package Controller avec une classe @RestController contenant un ChatClient
+- Tester avec un query=Bonjour
+  ![img_11.png](img_11.png)
+  
+
+
 
