@@ -135,4 +135,15 @@
 - Résolution du problème du CrossOrigin dans la gateway dans le fichier properties.yml
 - Création du folder model pour l'ajout des interfaces Accounts et AccountListState dans le fichier accounts.ts
 - Test
-  ![img_28.png](img_28.png)
+  ![img_28.png](img_28.png) <br>
+- Génération d'un service loading pour centraliser cette étape entre les compesants en utilisant un siganl<boolean> on ajoute deux méthodes: isLoading et setLoading.
+- Utiliser le service loading dans un intercepteur. Pour qu'à chaque fois qu'on envoie une requete elle passe via l'intercepteur.
+- Déclaration du service loading dans les fichiers typescript des composants. Ensuite l'afichage du spinner dans le fichier html en utilisant ce service.
+  ![img_29.png](img_29.png) <br>
+- Génération d'un composant chatbot, et affichage des résultats des requetes avec la dependance Markdown et l'intercepteur du loading.
+- Utilisation du streaming pour l'affichage des réponses en ajoutant dans le controller au backend du ebank-botun autre endpoint chatStream qui retournera un Flux.
+- Utilisation du Stream chat dans le front Angular.
+  ![img_30.png](img_30.png)
+  ![img_31.png](img_31.png)
+  ![img_32.png](img_32.png)
+  ![img_33.png](img_33.png)
