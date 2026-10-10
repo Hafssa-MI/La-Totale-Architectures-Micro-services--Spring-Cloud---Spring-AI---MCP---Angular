@@ -12,3 +12,14 @@
 #              uri: http://localhost:8057
 #              predicates:
 #                - Path= /accounts/**
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          globalcors:
+            cors-configurations:
+              '[/**]':
+                allowedOrigins: "*"
+                allowedMethods: "*"
+                allowedHeaders: "*"

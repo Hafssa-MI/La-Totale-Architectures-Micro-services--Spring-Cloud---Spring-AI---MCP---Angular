@@ -119,3 +119,20 @@
 - Tester
   ![img_25.png](img_25.png)
 
+
+
+---
+
+#### Ajouter un Front Angular
+
+- Création du projet Angular avec bootstrap et intégrer les dépendances dans style.css
+- Ajout d'un navbar daprès bootstrap avec <router-outlet> à la fin
+- Création du component accounts et configurer sa route dans app.routes
+- Vérification du fonctionnement du backend :
+  ![img_26.png](img_26.png)
+  ![img_27.png](img_27.png) <br>
+- Injecteion de l'HttpClient dans le fichier .ts et récupérer la liste des comptes via la gateway 9999, en faisant le subscribe dans le fichier html
+- Résolution du problème du CrossOrigin dans la gateway dans le fichier properties.yml
+- Création du folder model pour l'ajout des interfaces Accounts et AccountListState dans le fichier accounts.ts
+- Test
+  ![img_28.png](img_28.png)
